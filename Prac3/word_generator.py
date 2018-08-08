@@ -39,7 +39,4 @@ def is_valid_format(word_format):
     return valid_flag
 
 
-
-
-
 word_gen_main()
