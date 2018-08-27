@@ -9,6 +9,12 @@ STATE_NAMES = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Te
                "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
 # print(STATE_NAMES)
 
+max_short_name = max(len(state) for state in STATE_NAMES)
+# max_full_name = max(len(state[1]) for state in STATE_NAMES)
+
+for state in STATE_NAMES:
+    print("{:<{max_short_name}} is {}".format(state, STATE_NAMES[state], max_short_name= max_short_name))
+
 state = input("Enter short state: ")
 while state != "":
     if state in STATE_NAMES:
