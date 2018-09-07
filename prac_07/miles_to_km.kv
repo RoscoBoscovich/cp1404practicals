@@ -15,12 +15,12 @@ BoxLayout:
             Button:
                 text: "Up"
                 on_press: app.handle_increment(1),
-                on_press: app.handle_conversion(float(miles_input.text))
+                on_press: app.handle_conversion(miles_input.text)
 
             Button:
                 text: "Down"
                 on_press: app.handle_increment(-1)
-                on_press: app.handle_conversion(float(miles_input.text))
+                on_press: app.handle_conversion(miles_input.text)
 
 #    Button:
 #        text: "Convert miles to km"

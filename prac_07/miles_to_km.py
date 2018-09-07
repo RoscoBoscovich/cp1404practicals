@@ -21,7 +21,7 @@ class MilesToKmApp(App):
         try:
             self.root.ids.miles_input.text = str(float(self.root.ids.miles_input.text) + value)
         except ValueError:
-            self.root.ids.miles_input.text = str(value)
+            self.root.ids.miles_input.text = str(float(value))
 
     def handle_conversion(self, miles):
         """ handle the conversion"""
@@ -35,8 +35,6 @@ class MilesToKmApp(App):
         except ValueError:
             self.root.ids.output_label.text = "0.0"
         except TypeError:
-            self.root.ids.output_label.text = "0.0"
-        except ValueError:
             self.root.ids.output_label.text = "0.0"
 
 
