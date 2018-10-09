@@ -36,6 +36,4 @@ def check_file_type(filename):
     return name_split[1]
 
 
-
-
 main()
