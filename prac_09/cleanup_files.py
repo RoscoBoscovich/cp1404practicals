@@ -50,7 +50,7 @@ def get_fixed_filename(filename):
                     new_name += '_' + char
             else:
                 new_name += char
-    print(new_name)
+
 
     return new_name
 
