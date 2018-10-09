@@ -37,12 +37,12 @@ def choose_taxi(taxis):
         print("{} - {}".format(taxi[0], taxi[1]))
     chosen_taxi = input("Choose taxi: ")
     current_taxi = taxis[int(chosen_taxi)]
-    print(current_taxi)
+    #print(current_taxi)
     return current_taxi
 
 
 def drive_taxi(current_taxi, bill_to_date):
-    print(current_taxi)
+    #print(current_taxi)
     distance = int(input("Drive how far? "))
     current_taxi.drive(distance)
     bill_to_date = bill_to_date + current_taxi.get_fare()
