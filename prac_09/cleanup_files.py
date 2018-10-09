@@ -34,7 +34,24 @@ def main():
 
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
-    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+    new_name = ''
+    name_dict = {}
+    filename = filename.replace(" ", "").replace(".TXT", ".txt")
+    for index, char in enumerate(filename):
+        name_dict.update({index:char})
+    for index, char in name_dict.items():
+        if index == 0:
+            new_name = char
+        if index >= 1:
+            if name_dict[index].isupper() and name_dict[index-1].islower:
+                if name_dict[index-1] == '(':
+                    new_name += char
+                else:
+                    new_name += '_' + char
+            else:
+                new_name += char
+    print(new_name)
+
     return new_name
 
 
@@ -57,7 +74,7 @@ def demo_walk():
 
 
             # Option 1: rename file to new name - in place
-             os.rename(os.path.join(directory_name, filename), os.path.join(directory_name, new_name))
+             #os.rename(os.path.join(directory_name, filename), os.path.join(directory_name, new_name))
 
             # Option 2: move file to new place, with new name
             # shutil.move(filename, 'temp/' + new_name)
